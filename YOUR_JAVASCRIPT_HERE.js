@@ -30,15 +30,13 @@ function equipWeapon(Object) {
         Object.weapon = Object.inventory[0]}
     else return false
 }
-// function displayStats(Object) {
-//     let newObj = {
-//         name: Object.name,
-//         health: Object.health,
-//         weapon: Object.weapon,
-//     }
-//     return newObj
-// }
-// console.log(displayStats(hero))
+ function displayStats(Object) {
+     document.getElementById('heroName').innerHTML = Object.name
+     document.getElementById('health').innerHTML = Object.health
+     document.getElementById('weaponType').innerHTML = Object.weapon.type
+     document.getElementById('weaponDamage').innerHTML = Object.weapon.damage
+ }
+ console.log(displayStats(hero))
 
 function nameHero() {
     const name = document.getElementById('name')
